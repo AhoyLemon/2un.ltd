@@ -1,0 +1,614 @@
+* {
+  box-sizing: border-box; }
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+html,
+body {
+  height: 100%; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block; }
+
+b,
+strong {
+  font-weight: bold; }
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+ul,
+ol {
+  list-style: none; }
+
+li {
+  display: list-item; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left; }
+
+q {
+  quotes: none; }
+
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+sub,
+sup,
+small {
+  font-size: 75%; }
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+svg {
+  overflow: hidden; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 18px; }
+
+body {
+  background-color: #212121;
+  color: #eee;
+  font-family: "Nunito", sans-serif; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  cursor: pointer;
+  color: #ee2a2a; }
+
+b, strong {
+  font-weight: 600; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 105%; }
+
+ul {
+  padding-left: 1.5em; }
+  ul li {
+    list-style-type: disc; }
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none; } }
+
+main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  -webkit-align-items: strech;
+  align-items: strech;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 99vh;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
+
+.fullscreen-video {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  tranition: opacity 0.5s ease; }
+  .fullscreen-video.visible {
+    opacity: 1; }
+
+.ready-question {
+  font-weight: 300;
+  font-size: 230%; }
+
+.button-holder {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 5vh; }
+  .button-holder button {
+    display: inline-block;
+    padding: 0.25em 1.4em;
+    border: 0.1em solid #eee;
+    background-color: transparent;
+    font-size: 150%;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    outline: none; }
+    .button-holder button.yes {
+      color: #3eae12;
+      border-color: #3eae12;
+      margin-right: 1em; }
+      .button-holder button.yes:hover {
+        background-color: #3eae12;
+        color: #212121; }
+    .button-holder button.no {
+      color: #ee2a2a;
+      border-color: #ee2a2a; }
+      .button-holder button.no:hover {
+        background-color: #ee2a2a;
+        color: #212121; }
+    .button-holder button:active {
+      box-shadow: inset 0.135em 0.135em 0.135em rgba(33, 33, 33, 0.5); }
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  tranition: opacity 0.5s ease; }
+  .video-overlay .video, .video-overlay .ie8-poster {
+    position: fixed;
+    top: 0;
+    bottom: 0; }
+  .video-overlay .mobile-fallback {
+    display: none; }
+  .video-overlay.visible {
+    opacity: 1; }
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  height: 3.5rem;
+  z-index: 4; }
+  header > .inner {
+    padding-right: 4rem; }
+  header span {
+    display: block;
+    vertical-align: middle; }
+  header .label {
+    font-size: 0.7em;
+    font-family: "Nunito", sans-serif;
+    line-height: 200%; }
+  header .number {
+    font-size: 1.8em;
+    font-weight: 300;
+    line-height: 50%;
+    color: #3eae12; }
+    header .number.perfect {
+      color: #52d88e; }
+    header .number.great {
+      color: #1eaefc; }
+    header .number.okay {
+      color: #ca62f0; }
+    header .number.bad {
+      color: #ecb528; }
+    header .number.failure {
+      color: #ee2c2c; }
+  header > .inner {
+    color: #eee;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: strech;
+    -ms-flex-align: strech;
+    -webkit-align-items: strech;
+    align-items: strech;
+    padding-top: 0.2rem; }
+    header > .inner .box {
+      -webkit-flex-basis: 16.6%;
+      -ms-flex-preferred-size: 16.6%;
+      flex-basis: 16.6%;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+      flex-shrink: 1;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+      text-align: center;
+      height: 2.8em; }
+      header > .inner .box.zero {
+        opacity: 0; }
+  header .hamburger-holder {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem; }
+  header .hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #4885ed;
+    outline: none;
+    height: 2.25rem;
+    width: 2.25rem; }
+    header .hamburger svg {
+      fill: #f0f1f2; }
+    header .hamburger g {
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+      transform-origin: center;
+      transition: all 0.3s linear; }
+    header .hamburger .close {
+      opacity: 0.2;
+      -webkit-transform: scale(0.2);
+      -ms-transform: scale(0.2);
+      transform: scale(0.2); }
+    header .hamburger.is-active .close {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+    header .hamburger.is-active .open {
+      opacity: 0.2;
+      -webkit-transform: scale(0.2);
+      -ms-transform: scale(0.2);
+      transform: scale(0.2); }
+
+/**
+@media (max-width:$max-width) {
+  header { 
+    //.number { font-size:1.5em;}
+    > .inner {
+      .box { @include flex-item(33.3333%);
+        &.hamburger-holder { @include flex-item(3rem); }
+      }
+    } 
+    .hamburger-holder { text-align: right !important;
+      .hamburger { position:relative; top: auto; right:auto; height: 100%;
+        svg { height: 1.6rem; }
+      }
+    }
+  }
+}
+
+**/
+.sidebar-button {
+  background: transparent;
+  border: none;
+  color: #eee;
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  z-index: 10;
+  outline: none;
+  cursor: pointer; }
+  .sidebar-button svg {
+    width: 3.5em;
+    height: 3.5em; }
+    .sidebar-button svg * {
+      fill: #eee; }
+  .sidebar-button .x, .sidebar-button .question-mark {
+    transition: all 0.3s ease;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    fill: #eee; }
+  .sidebar-button .fill {
+    opacity: 0; }
+  .sidebar-button .x {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1); }
+  .sidebar-button .question-mark {
+    -webkit-transform-style: scale(1);
+    transform-style: scale(1); }
+  .sidebar-button:hover svg .question-mark, .sidebar-button:hover svg .x {
+    fill: #212121; }
+  .sidebar-button:hover svg .fill {
+    opacity: 1; }
+  .sidebar-button.is-active .x {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  .sidebar-button.is-active .question-mark {
+    opacity: 0;
+    -webkit-transform: scale(0.1) " ";
+    -ms-transform: scale(0.1) " ";
+    transform: scale(0.1) " "; }
+
+.sidebar {
+  position: fixed;
+  top: 3.5rem;
+  right: 0;
+  background: #f0f1f2;
+  color: #212121;
+  width: 14rem;
+  padding: 1rem;
+  z-index: 3;
+  border-left: 1px solid #212121;
+  border-bottom: 1px solid #212121;
+  -webkit-transform: translateX(101%);
+  -ms-transform: translateX(101%);
+  transform: translateX(101%);
+  transition: all 0.3s ease; }
+  .sidebar ul {
+    padding: 0; }
+  .sidebar li {
+    margin-bottom: 0.65em;
+    list-style: none; }
+  .sidebar .label {
+    display: block;
+    line-height: 90%; }
+  .sidebar .indent {
+    display: block;
+    padding-left: 1em;
+    font-weight: 600; }
+  .sidebar a {
+    color: #4885ed;
+    text-decoration: none;
+    cursor: pointer; }
+    .sidebar a:hover {
+      text-decoration: underline; }
+  .sidebar .smaller {
+    font-size: 0.8em; }
+  .sidebar.visible {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+
+.homescreen-help-holder {
+  background: #e5e972;
+  color: #212121;
+  z-index: 11;
+  display: none; }
+  .homescreen-help-holder.android {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 16em; }
+    .homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge, .homescreen-help-holder.android .opera, .homescreen-help-holder.android .desktop-chrome {
+      display: none; }
+    .homescreen-help-holder.android b {
+      display: block; }
+    .homescreen-help-holder.android .tap-that-icon {
+      margin-top: -1.2em; }
+    .homescreen-help-holder.android .bottom-center-icon {
+      display: none; }
+    .homescreen-help-holder.android.firefox {
+      padding-top: 1em; }
+  .homescreen-help-holder.ios {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .homescreen-help-holder.ios .homescreen-help {
+      text-align: center; }
+    .homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge, .homescreen-help-holder.ios .opera, .homescreen-help-holder.ios .desktop-chrome {
+      display: none; }
+    .homescreen-help-holder.ios span.arrow {
+      display: block;
+      text-align: center; }
+    .homescreen-help-holder.ios .top-right-icon {
+      display: none; }
+  .homescreen-help-holder.edge {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 16em; }
+    .homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android, .homescreen-help-holder.edge .opera, .homescreen-help-holder.edge .desktop-chrome {
+      display: none; }
+  .homescreen-help-holder.opera {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 16em; }
+    .homescreen-help-holder.opera .top-right-icon {
+      padding-right: 2.1em; }
+    .homescreen-help-holder.opera .ios, .homescreen-help-holder.opera .android, .homescreen-help-holder.opera .edge, .homescreen-help-holder.opera .desktop-chrome {
+      display: none; }
+  .homescreen-help-holder.desktop-chrome {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 16em; }
+    .homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge, .homescreen-help-holder.desktop-chrome .opera {
+      display: none; }
+  .homescreen-help-holder .homescreen-help {
+    text-align: right;
+    padding: 0.5em 0.5em 1em 1em; }
+  .homescreen-help-holder span.arrow svg {
+    height: 1em;
+    width: 1em; }
+  .homescreen-help-holder .button {
+    color: #212121;
+    border: 2px solid #212121;
+    padding: .25em 1em;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+    .homescreen-help-holder .button:hover {
+      color: #e5e972;
+      background: #212121;
+      border-color: #e5e972; }
+
+@media all and (display-mode: standalone) {
+  #AddToHomeScreen {
+    display: none; } }

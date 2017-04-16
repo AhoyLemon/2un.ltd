@@ -1,0 +1,28 @@
+main { @include flex-container(); justify-content: center; height:99vh; align-content: center; align-items: center; position: relative;
+  
+}
+
+.fullscreen-video { @include position(fixed,0,0,0,0); opacity:0; tranition:opacity 0.5s ease;
+  &.visible { opacity: 1 }
+}
+.ready-question { font-weight: $light; font-size:230%; }
+
+.button-holder { display: block; width: 100%; text-align: center; padding-top:5vh;
+  button { display: inline-block; padding: 0.25em 1.4em; border:0.1em solid $copy; background-color:transparent; font-size:150%; font-family:$sans-serif; cursor:pointer; outline:none;
+    &.yes { color:$green; border-color:$green; margin-right: 1em;
+      &:hover { background-color:$green; color:$body; }
+    }
+    &.no { color:$red; border-color:$red;
+      &:hover { background-color:$red; color:$body; }
+    }
+    &:active { box-shadow:inset 0.135em 0.135em 0.135em rgba($black,0.5); }
+  }
+}
+
+.video-overlay { @include position(fixed,0,0,0,0); width:100%;
+  .video, .ie8-poster { position: fixed; top: 0; bottom: 0; }
+  .mobile-fallback { display: none; }
+  
+  opacity:0; tranition:opacity 0.5s ease;
+  &.visible { opacity: 1 }
+}
