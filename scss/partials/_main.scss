@@ -5,7 +5,10 @@ main { @include flex-container(); justify-content: center; height:99vh; align-co
 .fullscreen-video { @include position(fixed,0,0,0,0); opacity:0; tranition:opacity 0.5s ease;
   &.visible { opacity: 1 }
 }
-.ready-question { font-weight: $light; font-size:230%; }
+.ready-question { font-weight: $light; font-size:230%;
+  &[ready-status="no"] { opacity: 1; }
+  &[ready-status="yes"] { opacity: 0; }
+}
 
 .button-holder { display: block; width: 100%; text-align: center; padding-top:5vh;
   button { display: inline-block; padding: 0.25em 1.4em; border:0.1em solid $copy; background-color:transparent; font-size:150%; font-family:$sans-serif; cursor:pointer; outline:none;
@@ -19,8 +22,8 @@ main { @include flex-container(); justify-content: center; height:99vh; align-co
   }
 }
 
-.video-overlay { @include position(fixed,0,0,0,0); width:100%;
-  .video, .ie8-poster { position: fixed; top: 0; bottom: 0; }
+.video-overlay { position: fixed; @include position(fixed,-50%,null,null,-50%); width: 200%; height: 200%;
+  .video, .ie8-poster { @include position(absolute,0,0,0,0); margin: auto; min-height: 50%; min-width: 50%; }
   .mobile-fallback { display: none; }
   
   opacity:0; tranition:opacity 0.5s ease;

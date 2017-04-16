@@ -65,10 +65,11 @@ ruReady.play();
 function noLongerReady() {
   isReady = false;
   $('.fullscreen-video, .video-overlay').removeClass('visible');
+  $('[ready-status]').attr('ready-status', 'no');
   isReady = false;
   setTimeout(function(){ 
     if (isReady === false) {
-      ruReady.play();
+      //ruReady.play();
     }
   }, spriteLength);
 }
@@ -97,9 +98,12 @@ function playSegment() {
   if (segment >= spriteNumber) { segment = 1; }
   segment = segment.toString();
   $('.fullscreen-video, .video-overlay').addClass('visible');
+  $('[ready-status]').attr('ready-status', 'yes');
   song.play(segment);
 }
 
+
+/*
 function party() {
   var p = Math.floor((Math.random() * 75) + 1);
   p++;
@@ -108,6 +112,7 @@ function party() {
   sound.play(p);
   sendGA('PARTY', p,  q+' parties queued');
 }
+*/
 
 $('.sidebar-button').click(function() {
   $(this).toggleClass('is-active');
@@ -370,6 +375,7 @@ $(document).ready(function() {
 
 
 
+/*
 // 1. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -416,3 +422,4 @@ function onPlayerStateChange(event) {
 function stopVideo() {
   player.stopVideo();
 }
+*/

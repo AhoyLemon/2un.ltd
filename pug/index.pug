@@ -11,14 +11,15 @@ html(lang="en")
   head
     include partials/_head.pug
   body
-    #player.fullscreen-video
-    //- video.video-overlay(autoplay loop muted)
-      source(src="videos/dance.webm" type="video/webm")
-      source(src="videos/dance.mp4" type="video/mp4")
+    //#player.fullscreen-video
+    .video-overlay
+      video.video(autoplay loop muted)
+        source(src="videos/dance.webm" type="video/webm")
+        source(src="videos/dance.mp4" type="video/mp4")
     include partials/_sidebar.pug
     main
       //iframe#YouTube(width="560" height="315" src="https://www.youtube.com/embed/1SngLUOGvpE?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen)
-      h3.ready-question
+      h3.ready-question(ready-status="no")
         | Are you ready for this?
       .button-holder
         button.yes#YesReady Yes

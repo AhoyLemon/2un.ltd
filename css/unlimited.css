@@ -272,6 +272,10 @@ main {
 .ready-question {
   font-weight: 300;
   font-size: 230%; }
+  .ready-question[ready-status="no"] {
+    opacity: 1; }
+  .ready-question[ready-status="yes"] {
+    opacity: 0; }
 
 .button-holder {
   display: block;
@@ -305,17 +309,22 @@ main {
 
 .video-overlay {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   opacity: 0;
   tranition: opacity 0.5s ease; }
   .video-overlay .video, .video-overlay .ie8-poster {
-    position: fixed;
+    position: absolute;
     top: 0;
-    bottom: 0; }
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%; }
   .video-overlay .mobile-fallback {
     display: none; }
   .video-overlay.visible {
