@@ -9,7 +9,7 @@ main { @include flex-container(); justify-content: center; height:99vh; align-co
 }
 
 
-.ready-question { font-weight: $light; font-size:230%;
+.ready-question { font-weight: $light; font-size:230%; text-align: center; 
   &[ready-status="no"] { opacity: 1; }
   &[ready-status="yes"] { opacity: 0; }
 }

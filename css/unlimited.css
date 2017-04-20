@@ -287,7 +287,8 @@ main {
 
 .ready-question {
   font-weight: 300;
-  font-size: 230%; }
+  font-size: 230%;
+  text-align: center; }
   .ready-question[ready-status="no"] {
     opacity: 1; }
   .ready-question[ready-status="yes"] {
