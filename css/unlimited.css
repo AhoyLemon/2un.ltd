@@ -269,6 +269,22 @@ main {
   .fullscreen-video.visible {
     opacity: 1; }
 
+.mobile-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .mobile-background figure {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+
 .ready-question {
   font-weight: 300;
   font-size: 230%; }
@@ -314,8 +330,7 @@ main {
   left: -50%;
   width: 200%;
   height: 200%;
-  opacity: 0;
-  tranition: opacity 0.5s ease; }
+  opacity: 0; }
   .video-overlay .video, .video-overlay .ie8-poster {
     position: absolute;
     top: 0;
@@ -329,6 +344,34 @@ main {
     display: none; }
   .video-overlay.visible {
     opacity: 1; }
+
+.mobile-background {
+  position: fixed;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0; }
+  .mobile-background .video, .mobile-background .ie8-poster {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%; }
+  .mobile-background.visible {
+    opacity: 1; }
+
+@media screen and (max-width: 700px) {
+  .video-overlay {
+    display: none; } }
+
+@media screen and (min-width: 701px) {
+  .mobile-background {
+    display: none; } }
 
 header {
   position: fixed;

@@ -3,8 +3,8 @@
 var q = 0;
 var parties = 0;
 var segment = 0;
-
 var isReady = false;
+var recentMobileVideos = [];
 
 function sendGA(c, a, l, v) {
   if (v) {
@@ -18,6 +18,24 @@ function sendGA(c, a, l, v) {
     console.log('CATEGORY: '+c+', ACTION:'+a);
   }
 }
+
+function changeMobileVideo() {
+  if ($(window).width() < 701) {
+    var r = Math.floor(Math.random() * 22) + 1;
+    if (recentMobileVideos.indexOf(r) != -1) {
+      changeMobileVideo();
+    } else {
+      recentMobileVideos.unshift(r);
+      $('.mobile-video source.webm').attr('src','videos/mobile/webm/dance'+r+'.webm');
+      $('.mobile-video source.mp4').attr('src','videos/mobile/mp4/dance'+r+'.mp4');
+      $('.mobile-video')[0].load();
+      recentMobileVideos.length = 3;
+    }
+    
+  }
+}
+
+changeMobileVideo();
 
 
 var ruReady = new Howl({
@@ -63,8 +81,9 @@ var song = new Howl({
 ruReady.play();
 
 function noLongerReady() {
+  changeMobileVideo();
   isReady = false;
-  $('.fullscreen-video, .video-overlay').removeClass('visible');
+  $('.fullscreen-video, .video-overlay, .mobile-background').removeClass('visible');
   $('[ready-status]').attr('ready-status', 'no');
   isReady = false;
   setTimeout(function(){ 
@@ -78,10 +97,8 @@ $('#YesReady').click(function() {
   if (q < 1) {
     q = 1;
     playSegment();
-    //eq();
   } else {
     q++;
-    //eq();
   }
 });
 
@@ -97,7 +114,7 @@ function playSegment() {
   isReady = true;
   if (segment >= spriteNumber) { segment = 1; }
   segment = segment.toString();
-  $('.fullscreen-video, .video-overlay').addClass('visible');
+  $('.fullscreen-video, .video-overlay, .mobile-background').addClass('visible');
   $('[ready-status]').attr('ready-status', 'yes');
   song.play(segment);
 }
