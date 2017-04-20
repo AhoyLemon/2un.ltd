@@ -21,7 +21,7 @@ function sendGA(c, a, l, v) {
 
 function changeMobileVideo() {
   if ($(window).width() < 701) {
-    var r = Math.floor(Math.random() * 22) + 1;
+    var r = Math.floor(Math.random() * 21) + 1;
     if (recentMobileVideos.indexOf(r) != -1) {
       changeMobileVideo();
     } else {
@@ -135,23 +135,6 @@ $('.sidebar-button').click(function() {
   $(this).toggleClass('is-active');
   $('.sidebar').toggleClass('visible');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
