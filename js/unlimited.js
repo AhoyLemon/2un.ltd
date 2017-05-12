@@ -7,7 +7,7 @@ var isReady = false;
 var recentMobileVideos = [];
 
 function sendGA(c, a, l, v) {
-  if (v) {
+ if (v) {
     ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l, eventValue:v });
     console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
   } else if (l) {
@@ -156,7 +156,7 @@ function addToHomeScreen(device,browser) {
     $('#HomescreenLink').text('add to desktop');
     $('#HomescreenLink, #HomescreenHolder').addClass('desktop-chrome');
   } else if (browser == "firefox") {
-    $('#AddToHomeScreen').html('<span class="label">bookmark idiots.win</span><span class="indent">Control+D</span>');
+    $('#AddToHomeScreen').html('<span class="label">bookmark 2un.ltd</span><span class="indent">Control+D</span>');
   } else {
     $('#AddToHomeScreen').remove();
   }
