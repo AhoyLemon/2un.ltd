@@ -17,12 +17,23 @@ main { @include flex-container(); justify-content: center; height:99vh; align-co
 .button-holder { display: block; width: 100%; text-align: center; padding-top:5vh;
   button { display: inline-block; padding: 0.25em 1.4em; border:0.1em solid $copy; background-color:transparent; font-size:150%; font-family:$sans-serif; cursor:pointer; outline:none;
     &.yes { color:$green; border-color:$green; margin-right: 1em;
-      &:hover { background-color:$green; color:$body; }
+      @include respond-to(desktop) {
+        &:hover { background-color:$green; color:$body; }
+        &:active { box-shadow:inset 0.135em 0.135em 0.135em rgba($black,0.5); }
+      }
+      @include respond-to(mobile) {
+        &:active { background-color:$green; color:$body; }
+      }
     }
     &.no { color:$red; border-color:$red;
-      &:hover { background-color:$red; color:$body; }
+      @include respond-to(desktop) {
+        &:hover { background-color:$red; color:$body; }
+        &:active { box-shadow:inset 0.135em 0.135em 0.135em rgba($black,0.5); }
+      }
+      @include respond-to(mobile) {
+        &:active { background-color:$red; color:$body; }
+      }
     }
-    &:active { box-shadow:inset 0.135em 0.135em 0.135em rgba($black,0.5); }
   }
 }
 
