@@ -2,7 +2,7 @@
 #### Are you all ready for this?
 
 ## Huh?
-**2UN 🔴 LTD** is a website that asks if you're ready for this. If you are ready for this, appropriate measures will be taken. But only for 1.5 seconds at a time.
+**2UN 🔵 LTD** is a website that asks if you're ready for this. If you are ready for this, appropriate measures will be taken. But only for 1.5 seconds at a time.
 
 ## Uhhhhhhhhhh... huh?
 It's a site that plays 2 Unlimited's "Get Ready For This" while showing you videos off people dancing.
