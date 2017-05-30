@@ -19,8 +19,6 @@ function sendGA(c, a, l, v) {
   }
 }
 
-
-
 function changeMobileVideo() {
   if ($(window).width() < 701) {
     var r = Math.floor(Math.random() * 21) + 1;
@@ -32,8 +30,6 @@ function changeMobileVideo() {
       $('.mobile-video source.mp4').attr('src','videos/mobile/mp4/dance'+r+'.mp4');
       $('.mobile-video')[0].load();
       recentMobileVideos.length = 3;
-      $('.mobile-video')[0].play();
-      //$('.mobile-video')[1].play();
     }
   }
 }
