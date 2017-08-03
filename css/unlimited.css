@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 a,
@@ -171,6 +172,7 @@ svg {
   overflow: hidden; }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
@@ -235,6 +237,8 @@ main {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -246,6 +250,7 @@ main {
   -ms-flex-align: strech;
   -webkit-align-items: strech;
   align-items: strech;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -253,6 +258,7 @@ main {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
@@ -317,6 +323,7 @@ main {
           background-color: #3eae12;
           color: #212121; }
         .button-holder button.yes:active {
+          -webkit-box-shadow: inset 0.135em 0.135em 0.135em rgba(33, 33, 33, 0.5);
           box-shadow: inset 0.135em 0.135em 0.135em rgba(33, 33, 33, 0.5); } }
       @media only screen and (max-width: 767px) {
         .button-holder button.yes:active {
@@ -330,6 +337,7 @@ main {
           background-color: #ee2a2a;
           color: #212121; }
         .button-holder button.no:active {
+          -webkit-box-shadow: inset 0.135em 0.135em 0.135em rgba(33, 33, 33, 0.5);
           box-shadow: inset 0.135em 0.135em 0.135em rgba(33, 33, 33, 0.5); } }
       @media only screen and (max-width: 767px) {
         .button-holder button.no:active {
@@ -361,11 +369,13 @@ main {
 .mobile-background {
   position: fixed;
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  opacity: 0.01; }
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  backgreound-position: center;
+  opacity: 0.001; }
   .mobile-background .video, .mobile-background .ie8-poster {
     position: absolute;
     top: 0;
@@ -429,6 +439,8 @@ header {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -445,6 +457,7 @@ header {
       -webkit-flex-basis: 16.6%;
       -ms-flex-preferred-size: 16.6%;
       flex-basis: 16.6%;
+      -webkit-box-flex: 1;
       -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
@@ -453,7 +466,6 @@ header {
       flex-shrink: 1;
       -webkit-align-self: auto;
       -ms-flex-item-align: auto;
-      -ms-grid-row-align: auto;
       align-self: auto;
       text-align: center;
       height: 2.8em; }
@@ -477,6 +489,8 @@ header {
       -webkit-transform-origin: center;
       -ms-transform-origin: center;
       transform-origin: center;
+      -webkit-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
       transition: all 0.3s linear; }
     header .hamburger .close {
       opacity: 0.2;
@@ -528,6 +542,8 @@ header {
     .sidebar-button svg * {
       fill: #eee; }
   .sidebar-button .x, .sidebar-button .question-mark {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     -webkit-transform-origin: center;
     -ms-transform-origin: center;
@@ -572,6 +588,8 @@ header {
   -webkit-transform: translateX(101%);
   -ms-transform: translateX(101%);
   transform: translateX(101%);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .sidebar ul {
     padding: 0; }

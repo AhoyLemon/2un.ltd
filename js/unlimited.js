@@ -21,14 +21,12 @@ function sendGA(c, a, l, v) {
 
 function changeMobileVideo() {
   if ($(window).width() < 701) {
-    var r = Math.floor(Math.random() * 21) + 1;
+    var r = Math.floor(Math.random() * 20) + 1;
     if (recentMobileVideos.indexOf(r) != -1) {
       changeMobileVideo();
     } else {
       recentMobileVideos.unshift(r);
-      $('.mobile-video source.webm').attr('src','videos/mobile/webm/dance'+r+'.webm');
-      $('.mobile-video source.mp4').attr('src','videos/mobile/mp4/dance'+r+'.mp4');
-      $('.mobile-video')[0].load();
+      $('.mobile-background').css('background-image','url(img/dance'+r+'.gif)');
       recentMobileVideos.length = 3;
     }
   }
