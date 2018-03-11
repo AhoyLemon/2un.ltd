@@ -21,7 +21,7 @@ function sendGA(c, a, l, v) {
 
 function changeMobileVideo() {
   if ($(window).width() < 701) {
-    var r = Math.floor(Math.random() * 20) + 1;
+    var r = Math.floor(Math.random() * 25) + 1;
     if (recentMobileVideos.indexOf(r) != -1) {
       changeMobileVideo();
     } else {
