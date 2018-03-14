@@ -76,7 +76,7 @@ var song = new Howl({
     } else {
       parties++;
       noLongerReady();
-      if (parties > 0) {
+      if (parties == 4) {
         $('#Banner').addClass('visible');
         byLemon.play();
       }
