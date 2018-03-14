@@ -40,6 +40,11 @@ var ruReady = new Howl({
   volume: 1
 });
 
+var byLemon = new Howl({
+  src: ['audio/bylemon.mp3'],
+  volume: 1
+});
+
 
 
 var spriteNumber = 1;
@@ -69,10 +74,19 @@ var song = new Howl({
       playSegment();
       // eq();
     } else {
+      parties++;
       noLongerReady();
+      if (parties > 0) {
+        $('#Banner').addClass('visible');
+        byLemon.play();
+      }
     }
   }
 });
+
+$('#Banner .close').click(function() {
+  $('#Banner').removeClass('visible');
+})
 
 
 ruReady.play();
@@ -88,6 +102,7 @@ function noLongerReady() {
       //ruReady.play();
     }
   }, spriteLength);
+
 }
 
 $('#YesReady').click(function() {
