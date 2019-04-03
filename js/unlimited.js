@@ -62,7 +62,6 @@ while (spriteStart < 106000) {
 
 console.log(sprites);
 
-
 var song = new Howl({
   src: ['audio/song.ogg', 'audio/song.mp3'],
   volume: 1,
@@ -78,7 +77,7 @@ var song = new Howl({
       noLongerReady();
       if (parties == 4) {
         $('#Banner').addClass('visible');
-        byLemon.play();
+        //byLemon.play();
       }
     }
   }
@@ -86,10 +85,10 @@ var song = new Howl({
 
 $('#Banner .close').click(function() {
   $('#Banner').removeClass('visible');
-})
+});
 
 
-ruReady.play();
+//ruReady.play();
 
 function noLongerReady() {
   changeMobileVideo();
@@ -99,7 +98,7 @@ function noLongerReady() {
   isReady = false;
   setTimeout(function(){ 
     if (isReady === false) {
-      //ruReady.play();
+      ruReady.play();
     }
   }, spriteLength);
 
