@@ -9,13 +9,13 @@ var recentMobileVideos = [];
 function sendGA(c, a, l, v) {
  if (v) {
     ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l, eventValue:v });
-    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
+    //console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
   } else if (l) {
     ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l });
-    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
+    //console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
   } else {
     ga('send', 'event', { eventCategory: c, eventAction: a });
-    console.log('CATEGORY: '+c+', ACTION:'+a);
+    //console.log('CATEGORY: '+c+', ACTION:'+a);
   }
 }
 
@@ -60,7 +60,7 @@ while (spriteStart < 106000) {
   sprites[s] = [spriteStart,spriteLength];
 }
 
-console.log(sprites);
+//console.log(sprites);
 
 var song = new Howl({
   src: ['audio/song.ogg', 'audio/song.mp3'],
@@ -173,7 +173,7 @@ function addToHomeScreen(device,browser) {
 $(document).ready(function() {
 
   var ua = navigator.userAgent.toLowerCase();
-  console.log(ua);
+  //console.log(ua);
   device = "";
   browser = "";
 
@@ -210,6 +210,6 @@ $(document).ready(function() {
     device = "unknown";
     browser = "chrome";
   }
-  console.log('device: '+device+'. browser:'+browser);
+  //console.log('device: '+device+'. browser:'+browser);
   addToHomeScreen(device,browser);
 });
